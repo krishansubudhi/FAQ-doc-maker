@@ -1,0 +1,28 @@
+	Heading
+A heading starts with a <b>tab</b> or <b>four spaces</b>.
+		Sub Heading
+A subheading starts with <b>2 tabs </b> or <b>8 spaces</b>.
+
+	Links
+If line starts with http, it will be a link
+		Example
+http://www.snapdeal.com
+
+	How to run
+python FAQhtmlConverter.py folder_path
+
+This will create html files for all docs in the folder.
+Html files will be stored in folder_path/html
+
+	What does FAQwatcher.py do?
+python FAQwatcher.py folder_path
+
+This will watch the files in the specified folder and rebuild the htmls after any change.
+
+	Final steps
+		Add cron to enable watcher on reboot
+@reboot  python /home/<user>/dev/python/FAQwatcher.py /home/krishan/<user>/docs/faq > /tmp/faqwatcher.log
+Don't forget to modify the user name. :-)
+		Bookmarking
+In your fav browser, add the html folder (/home/<user>/office/docs/faq/html) as a bookmark for easy access to all the files.
+
